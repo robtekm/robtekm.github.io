@@ -319,12 +319,30 @@ body {
     border-bottom: none;
 }
 
+/* Title of the paper */
 .publication h3 {
     font-size: 1.1rem;
+    font-weight: 600;
     color: var(--primary-color);
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+/* Authors line */
+.authors {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #444;
     margin-bottom: 8px;
 }
 
+/* Highlight your name only */
+.author-self {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Journal / meta info */
 .publication-meta {
     font-size: 0.9rem;
     color: var(--gray-color);
@@ -332,32 +350,11 @@ body {
     margin-bottom: 10px;
 }
 
-/* =========================================================
-   FOOTER
-========================================================= */
-.footer {
-    background-color: var(--light-gray);
-    padding: 25px 40px;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.footer p {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--gray-color);
-    font-size: 0.95rem;
-}
-
-.copyright {
-    font-size: 0.9rem;
+/* Description */
+.publication p {
+    font-size: 1.02rem;
+    color: #555;
+    line-height: 1.7;
 }
 
 /* =========================================================

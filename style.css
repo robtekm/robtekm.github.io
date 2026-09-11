@@ -4,7 +4,7 @@ body {
 
 
 h1 {
-  color: purple;
+  color: black;
   font-size: 32px;
 }
 
@@ -14,6 +14,6 @@ p {
 
 
 .destaque {
-  background-color: gray;
+  background-color: white;
   text-align: center;
 }

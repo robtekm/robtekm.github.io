@@ -24,7 +24,9 @@ h1 {
 }
 
 p {
+text-align: center
   color: #345;
+    margin: 0 auto;
 }
 
 

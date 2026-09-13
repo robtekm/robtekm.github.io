@@ -28,6 +28,12 @@ text-align: center
   color: #345;
     margin: 0 auto;
 }
+.rodape {
+    font-size: 0.85rem;
+    text-align: center;
+    color: #555555;
+    margin: 0 auto;    
+}
 
 
 .destaque {

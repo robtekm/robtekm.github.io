@@ -44,7 +44,7 @@ p {
   text-align: center;
 }
 .foto-lateral {
-  width: 500px;
+  width: 200px;
   height: auto;
   object-fit: contain;
 }

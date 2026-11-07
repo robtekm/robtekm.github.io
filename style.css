@@ -189,3 +189,30 @@ a:hover {
     padding: 15px 10px;
   }
 }
+
+/* ===== BOTÃO DO CV ===== */
+.centro-botao {
+  text-align: center;
+  margin: 25px 0 35px 0;
+}
+
+.botao-cv {
+  display: inline-block;
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.botao-cv:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(52, 152, 219, 0.4);
+  text-decoration: none;
+  color: #ffffff;
+}

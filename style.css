@@ -1,69 +1,191 @@
-/*========================================================================================================= */
-/*========================================================================================================= */
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    line-height: 1.6;
-    color: #333;
-    background-color: #b3d9ff;
+  font-family: Arial, sans-serif;
+  background-color: #e3f2fd;
+  color: #333;
+  line-height: 1.6;
+  padding: 30px 15px;
 }
 
-.box {
-    background-color: #ffffff;
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 40px;
-    border-radius:12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-h1 {
-  color: black;
-  font-size: 32px;
-}
-
-p {
-text-align: center
-  color: #345;
-    margin: 0 auto;
-}
-.rodape {
-    font-size: 0.85rem;
-    text-align: center;
-    color: #555555;
-    margin: 0 auto;    
-}
-
-
-.destaque {
-  background-color: white;
-  text-align: center;
-}
-
-/*========================================================================================================= */
-/* PARTE DOS BLOCOS DO CABEÇALHO */
-/*========================================================================================================= */
-
+/* ===== CABEÇALHO COM 3 IMAGENS ===== */
 .cabecalho {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   gap: 30px;
-  padding: 40px;
-  }
-.bloco-esquerda, .bloco-direita {
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+}
+
+.bloco-esquerda,
+.bloco-direita {
+  flex: 0 1 220px;
+  max-width: 220px;
+}
+
+.bloco-centro {
   flex: 0 0 auto;
 }
-.bloco-centro{
-  flex:1;
-  text-align: center;
-}
+
 .foto-lateral {
-  width: 200px;
+  width: 100%;
   height: auto;
-  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-/*========================================================================================================= */
-/*========================================================================================================= */
+
+/* A foto do centro vira circular (foto de perfil) */
+.bloco-centro .foto-lateral {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== BOX BRANCO ===== */
+.box {
+  background-color: #ffffff;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== TÍTULOS ===== */
+.destaque {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 1.6rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #3498db;
+}
+
+.destaque:first-child {
+  margin-top: 0;
+}
+
+/* ===== TEXTO ===== */
+p {
+  margin-bottom: 12px;
+}
+
+ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RODAPÉ (FORA DO BOX, SOBRE O FUNDO AZUL) ===== */
+.rodape {
+  max-width: 900px;
+  margin: 40px auto 0 auto;      /* centraliza e afasta do box */
+  text-align: center;
+  color: #2c3e50;                /* azul-escuro, contraste com o fundo */
+  font-size: 0.85rem;
+  line-height: 1.7;
+  padding: 20px;
+  opacity: 0.75;                 /* deixa mais sutil, sem sumir */
+}
+
+/* =========================================================
+   RESPONSIVO — TABLET (até 768px)
+========================================================= */
+@media (max-width: 768px) {
+  .cabecalho {
+    gap: 20px;
+  }
+
+  .bloco-esquerda,
+  .bloco-direita {
+    flex: 0 1 160px;
+    max-width: 160px;
+  }
+
+  .bloco-centro .foto-lateral {
+    width: 140px;
+    height: 140px;
+  }
+
+  .box {
+    padding: 30px 25px;
+  }
+
+  .destaque {
+    font-size: 1.4rem;
+  }
+}
+
+/* =========================================================
+   RESPONSIVO — CELULAR (até 480px)
+========================================================= */
+@media (max-width: 480px) {
+  body {
+    padding: 15px 10px;
+  }
+
+  .cabecalho {
+    gap: 15px;
+  }
+
+  /* Perfil vai para o topo e ocupa a linha inteira */
+  .bloco-centro {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    order: -1;
+  }
+
+  .bloco-centro .foto-lateral {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* As duas imagens laterais ficam lado a lado abaixo */
+  .bloco-esquerda,
+  .bloco-direita {
+    flex: 1 1 0;
+    max-width: 140px;
+  }
+
+  .box {
+    padding: 25px 18px;
+  }
+
+  .destaque {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .rodape {
+    font-size: 0.8rem;
+    padding: 15px 10px;
+  }
+}
